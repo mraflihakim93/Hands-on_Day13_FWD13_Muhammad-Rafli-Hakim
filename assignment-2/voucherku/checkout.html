@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - VoucherKu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- navbar -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <input type="checkbox" id="menuHp" class="hidden" />
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="bg-teal-600 text-white w-9 h-9 rounded-lg flex items-center justify-center font-bold">V</span>
+        <span class="font-bold text-lg">Voucher<span class="text-teal-600">Ku</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-600 hover:text-teal-600">Katalog</a>
+        <a href="dashboard.html" class="text-slate-600 hover:text-teal-600">Dashboard</a>
+        <a href="checkout.html" class="text-teal-600 font-semibold">Checkout</a>
+        <a href="product.html" class="text-slate-600 hover:text-teal-600">Detail Voucher</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="hidden sm:block bg-teal-600 text-white text-sm font-semibold px-4 py-2 rounded-lg btn-main">Belanja Lagi</a>
+        <label for="menuHp" class="md:hidden w-9 h-9 border border-slate-200 rounded-lg flex items-center justify-center text-slate-600 cursor-pointer">☰</label>
+      </div>
+    </div>
+    <div class="isi-menu hidden md:hidden border-t border-slate-100 px-4 py-2">
+      <a href="index.html" class="block py-2 text-sm text-slate-600">Katalog</a>
+      <a href="dashboard.html" class="block py-2 text-sm text-slate-600">Dashboard</a>
+      <a href="checkout.html" class="block py-2 text-sm font-semibold text-teal-600">Checkout</a>
+      <a href="product.html" class="block py-2 text-sm text-slate-600">Detail Voucher</a>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 py-10">
+
+    <h1 class="text-2xl font-extrabold">Checkout</h1>
+    <p class="text-sm text-slate-500 mt-1">Selesaikan pembelian vouchermu di sini.</p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+      <div class="lg:col-span-2 space-y-6">
+        <section class="bg-white rounded-xl border border-slate-100 p-5 sm:p-6">
+          <h2 class="font-bold text-lg">1. Data Pembeli</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <div class="sm:col-span-2">
+              <label class="text-sm font-medium text-slate-700">Email (kode dikirim ke sini)</label>
+              <input type="email" placeholder="rafli@email.com"
+                class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
+            </div>
+            <div>
+              <label class="text-sm font-medium text-slate-700">Nama Lengkap</label>
+              <input type="text" placeholder="Muhammad Rafli Hakim"
+                class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
+            </div>
+            <div>
+              <label class="text-sm font-medium text-slate-700">No. WhatsApp</label>
+              <input type="tel" placeholder="0812xxxxxxx"
+                class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
+            </div>
+          </div>
+        </section>
+        <section class="bg-white rounded-xl border border-slate-100 p-5 sm:p-6">
+          <h2 class="font-bold text-lg">2. Data Akun Game</h2>
+          <p class="text-xs text-slate-500 mt-1">Isi jika membeli voucher game / top up.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <div>
+              <label class="text-sm font-medium text-slate-700">User ID</label>
+              <input type="text" placeholder="123456789"
+                class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
+            </div>
+            <div>
+              <label class="text-sm font-medium text-slate-700">Zone ID</label>
+              <input type="text" placeholder="1234"
+                class="mt-1 w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
+            </div>
+          </div>
+        </section>
+        <section class="bg-white rounded-xl border border-slate-100 p-5 sm:p-6">
+          <h2 class="font-bold text-lg">3. Metode Pembayaran</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+            <label class="flex items-center gap-3 border border-teal-500 bg-teal-50 rounded-lg p-4 cursor-pointer">
+              <input type="radio" name="bayar" checked class="accent-teal-600" />
+              <span class="text-lg">🏦</span>
+              <span class="text-sm font-semibold">Transfer Bank</span>
+            </label>
+            <label class="flex items-center gap-3 border border-slate-200 rounded-lg p-4 cursor-pointer hover:border-teal-400 transition">
+              <input type="radio" name="bayar" class="accent-teal-600" />
+              <span class="text-lg">📱</span>
+              <span class="text-sm font-semibold">E-Wallet</span>
+            </label>
+            <label class="flex items-center gap-3 border border-slate-200 rounded-lg p-4 cursor-pointer hover:border-teal-400 transition">
+              <input type="radio" name="bayar" class="accent-teal-600" />
+              <span class="text-lg">🔳</span>
+              <span class="text-sm font-semibold">QRIS</span>
+            </label>
+            <label class="flex items-center gap-3 border border-slate-200 rounded-lg p-4 cursor-pointer hover:border-teal-400 transition">
+              <input type="radio" name="bayar" class="accent-teal-600" />
+              <span class="text-lg">🏪</span>
+              <span class="text-sm font-semibold">Minimarket</span>
+            </label>
+          </div>
+        </section>
+        <section class="bg-white rounded-xl border border-slate-100 p-5 sm:p-6">
+          <label class="flex items-start gap-3 text-sm text-slate-600">
+            <input type="checkbox" class="mt-0.5 accent-teal-600" />
+            <span>Kode voucher tidak dapat dikembalikan setelah dikirim. Saya setuju dengan <a href="#" class="text-teal-600 font-semibold hover:underline">Syarat & Ketentuan</a>.</span>
+          </label>
+          <a href="dashboard.html" class="mt-5 block text-center bg-teal-600 text-white font-bold py-3 rounded-lg btn-main">
+            Bayar Sekarang
+          </a>
+        </section>
+      </div>
+      <aside>
+        <div class="bg-white rounded-xl border border-slate-100 p-5 lg:sticky lg:top-24">
+          <h2 class="font-bold text-lg">Ringkasan Pesanan</h2>
+
+          <div class="mt-4 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="voucher-logo w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-xl">💎</span>
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Diamond Mobile Legends</p>
+                <p class="text-xs text-slate-500">5 Diamond</p>
+              </div>
+              <span class="text-sm font-semibold">Rp 15.000</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="voucher-logo w-12 h-12 rounded-lg bg-gradient-to-br from-red-500 to-rose-600 text-xl">🎬</span>
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Netflix Premium</p>
+                <p class="text-xs text-slate-500">1 Bulan</p>
+              </div>
+              <span class="text-sm font-semibold">Rp 45.000</span>
+            </div>
+          </div>
+          <div class="mt-5 flex gap-2">
+            <input type="text" placeholder="Kode promo"
+              class="flex-1 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
+            <button class="shrink-0 border border-slate-300 text-slate-700 text-sm font-semibold px-3 rounded-lg hover:bg-slate-100 transition">Pakai</button>
+          </div>
+          <div class="mt-5 border-t border-slate-100 pt-5 space-y-2 text-sm">
+            <div class="flex justify-between">
+              <span class="text-slate-500">Subtotal</span>
+              <span class="font-semibold">Rp 60.000</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Biaya layanan</span>
+              <span class="font-semibold">Rp 1.000</span>
+            </div>
+            <div class="flex justify-between text-base font-bold border-t border-slate-100 pt-3 mt-3">
+              <span>Total</span>
+              <span class="text-teal-600">Rp 61.000</span>
+            </div>
+          </div>
+
+          <div class="mt-5 bg-teal-50 border border-teal-200 rounded-lg p-3 text-xs text-teal-800">
+            ⚡ Kode voucher dikirim otomatis ke email setelah pembayaran berhasil.
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-300 mt-10">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-center text-sm">
+      Copyright 2026 VoucherKu. Tugas web marketplace voucher digital.
+    </div>
+  </footer>
+</body>
+</html>

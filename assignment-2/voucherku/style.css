@@ -1,0 +1,34 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* efek pas kartu di hover */
+.voucher-card {
+  transition: 0.3s;
+}
+.voucher-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(13, 148, 136, 0.18);
+}
+
+.voucher-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.btn-main {
+  transition: 0.2s;
+}
+.btn-main:hover {
+  background-color: #0f766e;
+}
+
+/* menu hp, pakai checkbox yang disembunyikan */
+#menuHp {
+  display: none;
+}
+#menuHp:checked ~ .isi-menu {
+  display: block;
+}
